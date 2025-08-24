@@ -13,7 +13,6 @@ public class Main {
         mainTransporte();
     }
 
-    // Requisito: método mainTransporte que orquesta el flujo
     public static void mainTransporte() {
         Scanner sc = new Scanner(System.in);
         ModelFactory mf = ModelFactory.getInstance();
