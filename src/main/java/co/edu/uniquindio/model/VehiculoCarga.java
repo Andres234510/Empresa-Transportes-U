@@ -1,45 +1,32 @@
 package co.edu.uniquindio.model;
 
 public class VehiculoCarga extends Vehiculo {
-    private double capacidadCarga;
+    private double capacidadCargaKg;
     private Propietario propietario;
 
-    // Constructor sin propietario
-    public VehiculoCarga(String placa, String marca, double capacidadCarga) {
+    public VehiculoCarga(String placa, String marca, double capacidadCargaKg, Propietario propietario) {
         super(placa, marca);
-        this.capacidadCarga = capacidadCarga;
-    }
-
-    // Constructor con propietario
-    public VehiculoCarga(String placa, String marca, double capacidadCarga, Propietario propietario) {
-        super(placa, marca);
-        this.capacidadCarga = capacidadCarga;
+        this.capacidadCargaKg = capacidadCargaKg;
         this.propietario = propietario;
     }
 
-    public double getCapacidadCarga() {
-        return capacidadCarga;
+    public VehiculoCarga(String placa, String marca, double capacidadCargaKg) {
+        this(placa, marca, capacidadCargaKg, null);
     }
 
-    public void setCapacidadCarga(double capacidadCarga) {
-        this.capacidadCarga = capacidadCarga;
-    }
+    public double getCapacidadCargaKg() { return capacidadCargaKg; }
+    public void setCapacidadCargaKg(double capacidadCargaKg) { this.capacidadCargaKg = capacidadCargaKg; }
 
-    public Propietario getPropietario() {
-        return propietario;
-    }
-
-    public void setPropietario(Propietario propietario) {
-        this.propietario = propietario;
-    }
+    public Propietario getPropietario() { return propietario; }
+    public void setPropietario(Propietario propietario) { this.propietario = propietario; }
 
     @Override
     public String toString() {
-        return "VehiculoCarga{" +
-                "placa='" + getPlaca() + '\'' +
-                ", marca='" + getMarca() + '\'' +
-                ", capacidadCarga=" + capacidadCarga +
-                ", propietario=" + (propietario != null ? propietario.getNombre() : "Sin propietario") +
-                '}';
+        return "VehiculoCarga: " +'\'' +
+                "placa= '" + getPlaca() + '\'' +
+                ", marca= '" + getMarca() + '\'' +
+                ", capacidad Carga en Kg= " + capacidadCargaKg +
+                ", propietario =" + (propietario != null ? propietario.getNombre() + " (" + propietario.getCedula() + ")"
+                : "Sin propietario");
     }
 }

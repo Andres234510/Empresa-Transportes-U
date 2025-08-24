@@ -10,29 +10,18 @@ public class VehiculoPasajero extends Vehiculo {
         this.numPasajerosDiarios = 0;
     }
 
-    public int getCapacidadPasajeros() {
-        return capacidadPasajeros;
-    }
+    public int getCapacidadPasajeros() { return capacidadPasajeros; }
+    public void setCapacidadPasajeros(int capacidadPasajeros) { this.capacidadPasajeros = capacidadPasajeros; }
 
-    public void setCapacidadPasajeros(int capacidadPasajeros) {
-        this.capacidadPasajeros = capacidadPasajeros;
-    }
-
-    public int getNumPasajerosDiarios() {
-        return numPasajerosDiarios;
-    }
-
-    public void setNumPasajerosDiarios(int numPasajerosDiarios) {
-        this.numPasajerosDiarios = numPasajerosDiarios;
-    }
+    public int getNumPasajerosDiarios() { return numPasajerosDiarios; }
+    public void setNumPasajerosDiarios(int numPasajerosDiarios) { this.numPasajerosDiarios = numPasajerosDiarios; }
 
     @Override
     public String toString() {
-        return "VehiculoPasajero{" +
-                "placa='" + getPlaca() + '\'' +
-                ", marca='" + getMarca() + '\'' +
-                ", capacidadPasajeros=" + capacidadPasajeros +
-                ", pasajerosHoy=" + numPasajerosDiarios +
-                '}';
+        return "VehiculoPasajero" + '\'' +
+                "placa= '" + getPlaca() + '\'' +
+                ", marca= '" + getMarca() + '\'' +
+                ", capacidad pasajeros= " + capacidadPasajeros + '\'' +
+                ", pasajeros Hoy= " + numPasajerosDiarios ;
     }
 }
